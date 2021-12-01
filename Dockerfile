@@ -7,7 +7,7 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN sudo pip3 install --upgrade pip
 RUN pip3 --version
 #Torch and dependencies:
-RUN pip3 install torch==1.10.0
+RUN pip install torch==1.10.0
 
 
 RUN pip install torchvision cffi tensorboardX
