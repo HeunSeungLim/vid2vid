@@ -1,22 +1,22 @@
 FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
-RUN apt-get update && apt-get install -y rsync htop git openssh-server
+RUN sudo apt-get update && apt-get install -y rsync htop git openssh-server
 
-RUN apt-get install python3-pip -y
+RUN sudo apt-get install python3-pip -y
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN pip3 install --upgrade pip
+RUN sudo pip3 install --upgrade pip
 RUN pip3 --version
 #Torch and dependencies:
 RUN pip3 install torch==1.10.0
 
 
-RUN pip3 install torchvision cffi tensorboardX
-RUN pip3 install tqdm scipy scikit-image colorama==0.3.7 
-RUN pip3 install setproctitle pytz ipython
+RUN pip install torchvision cffi tensorboardX
+RUN pip install tqdm scipy scikit-image colorama==0.3.7 
+RUN pip install setproctitle pytz ipython
 
 #vid2vid dependencies
 RUN apt-get install libglib2.0-0 libsm6 libxrender1 -y
-RUN pip3 install dominate requests opencv-python 
+RUN pip install dominate requests opencv-python 
 
 #pix2pixHD, required for initializing training
 RUN git clone https://github.com/NVIDIA/pix2pixHD /pix2pixHD
