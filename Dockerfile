@@ -1,11 +1,11 @@
 FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
-RUN sudo apt-get update && apt-get install -y rsync htop git openssh-server
-
-RUN sudo apt-get install python3-pip -y
+RUN apt-get update && apt-get install -y rsync htop git openssh-server
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN sudo pip3 install --upgrade pip
-RUN pip3 --version
+RUN pip install --upgrade pip
+
 #Torch and dependencies:
 RUN pip install torch==1.10.0
 
