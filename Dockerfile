@@ -4,10 +4,10 @@ RUN apt-get update && apt-get install -y rsync htop git openssh-server
 
 RUN apt-get install python3-pip -y
 RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN pip3 install --upgrade pip
+#RUN pip3 install --upgrade pip
 
 #Torch and dependencies:
-#RUN pip install torch==1.10.0
+RUN pip install torch==1.10.0
 
 RUN pip install torchvision cffi tensorboardX
 RUN pip install tqdm scipy scikit-image colorama==0.3.7 
