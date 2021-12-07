@@ -7,7 +7,9 @@ RUN apt-get -y install python3
 RUN apt-get -y install python3-pip
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN pip install --upgrade pip
-
+RUN sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+RUN sudo apt-get update
+RUN sudo apt-get install gcc-8
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
         cmake \
@@ -23,7 +25,7 @@ RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-
         ffmpeg \
         libx264-dev \
         imagemagick
-
+RUN apt-get install gcc
 #RUN pip install torch==1.4.0+cu92 torchvision==0.5.0+cu92 -f https://download.pytorch.org/whl/torch_stable.html
 
 
