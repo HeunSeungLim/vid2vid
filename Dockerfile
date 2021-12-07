@@ -6,7 +6,7 @@ FROM nvcr.io/nvidia/pytorch:18.07-py3
 #RUN apt-get -y install python3
 #RUN apt-get -y install python3-pip
 #RUN ln -s /usr/bin/python3 /usr/bin/python
-#RUN pip3 install --upgrade pip
+RUN pip install --upgrade pip
 
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
