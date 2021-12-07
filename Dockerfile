@@ -51,6 +51,7 @@ WORKDIR /vid2vid
 RUN python scripts/download_flownet2.py
 RUN python scripts/download_models_flownet2.py
 RUN python scripts/download_datasets.py
+RUN pip install dlib
 RUN python data/face_landmark_detection.py train
 RUN python data/face_landmark_detection.py test
 
