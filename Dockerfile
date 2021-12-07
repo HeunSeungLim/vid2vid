@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
 
 FROM nvcr.io/nvidia/pytorch:20.08-py3
 
