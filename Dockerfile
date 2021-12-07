@@ -2,11 +2,11 @@ FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
 
 FROM nvcr.io/nvidia/pytorch:18.07-py3
 
-#RUN apt-get update && apt-get install -y rsync htop git openssh-server
-#RUN apt-get -y install python3
-#RUN apt-get -y install python3-pip
-#RUN ln -s /usr/bin/python3 /usr/bin/python
-#RUN pip install --upgrade pip
+RUN apt-get update && apt-get install -y rsync htop git openssh-server
+RUN apt-get -y install python3
+RUN apt-get -y install python3-pip
+RUN ln -s /usr/bin/python3 /usr/bin/python
+RUN pip install --upgrade pip
 
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
