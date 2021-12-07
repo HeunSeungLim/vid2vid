@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:11.1-cudnn8-devel-ubuntu20.04
 
 RUN apt-get update && apt-get install -y rsync htop git openssh-server
 
