@@ -3,13 +3,13 @@ FROM nvidia/cuda:11.0-cudnn8-runtime-ubuntu18.04
 
 FROM nvcr.io/nvidia/pytorch:20.08-py3
 
-RUN apt-get update && apt-get install -y rsync htop git openssh-server
-RUN apt-get -y install python3
-RUN apt-get -y install python3-pip
-RUN ln -s /usr/bin/python3 /usr/bin/python
-RUN pip install --upgrade pip
-RUN sudo add-apt-repository ppa:ubuntu-toolchain-r/test
-RUN sudo apt-get update
+#RUN apt-get update && apt-get install -y rsync htop git openssh-server
+#RUN apt-get -y install python3
+#RUN apt-get -y install python3-pip
+#RUN ln -s /usr/bin/python3 /usr/bin/python
+#RUN pip install --upgrade pip
+#RUN sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+#RUN sudo apt-get update
 RUN sudo apt-get install gcc-8
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
