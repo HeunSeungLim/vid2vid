@@ -10,7 +10,7 @@ FROM nvcr.io/nvidia/pytorch:20.08-py3
 #RUN pip install --upgrade pip
 #RUN sudo add-apt-repository ppa:ubuntu-toolchain-r/test
 #RUN sudo apt-get update
-RUN sudo apt-get install gcc-8
+RUN apt-get install gcc-8
 RUN apt-get update && apt-get install -y --allow-downgrades --allow-change-held-packages --no-install-recommends \
         build-essential \
         cmake \
