@@ -1,7 +1,7 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime-ubuntu18.04
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 #devel-ubuntu16.04
 
-FROM nvcr.io/nvidia/pytorch:19.09-py3
+FROM nvcr.io/nvidia/pytorch:19.01-py3
 
 RUN apt-get update && apt-get install -y rsync htop git openssh-server
 RUN apt-get -y install python3
