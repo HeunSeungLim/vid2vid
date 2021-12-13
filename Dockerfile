@@ -36,3 +36,5 @@ RUN python scripts/face/download_models.py
 #RUN python data/face_landmark_detection.py train
 #RUN python data/face_landmark_detection.py test
 
+RUN git clone https://github.com/HeunSeungLim/ml4a.git
+
