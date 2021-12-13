@@ -23,7 +23,7 @@ RUN apt-get install libglib2.0-0 libsm6 libxrender1 -y
 RUN pip install dominate requests opencv-python 
 
 #vid2vid install
-RUN git clone https://github.com/NVIDIA/vid2vid /vid2vid
+RUN git clone https://github.com/HeunSeungLim/vid2vid.git
 WORKDIR /vid2vid
 #download flownet2 model dependencies
 #WARNING: we had an instance where these scripts needed to be re-run after the docker instance was launched
